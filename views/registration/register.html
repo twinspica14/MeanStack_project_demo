@@ -1,0 +1,20 @@
+<div ng-controller="RegCtrl">
+<form >
+<label>Email</label>
+<input type="text" class="form-control" id="email" ng-model="usr.email" name="email" placeholder="email">
+
+<label> Name</label>
+<input id="name" name="name" class="form-control" ng-model="usr.name" placeholder="name">
+
+<label>Password</label>
+<input id="password" name="password" class="form-control" ng-model="usr.password" placeholder="password">
+</form>
+<button type="button" class="btn btn-success" ng-click="submit(usr)">Submit</button>
+<div ng-show="successMsg">
+<div class="alert alert-success">{{successMsg}}</div>
+</div>
+
+<div ng-show="errorMsg">
+<div class="alert alert-danger">{{errorMsg}}</div>
+</div>
+</div>

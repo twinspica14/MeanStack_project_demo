@@ -1,0 +1,19 @@
+<div ng-controller="LoginCtrl">
+<form >
+<h3><i>login</i></h3>
+
+<label> Name</label>
+<input id="name" name="name" class="form-control" ng-model="logg.name" placeholder="name">
+
+<label>Password</label>
+<input id="password" name="password" class="form-control" ng-model="logg.password" placeholder="password">
+</form>
+<button type="button" class="btn btn-success" ng-click="submit(logg)">Submit</button>
+<div ng-show="successMsg">
+<div class="alert alert-success">{{successMsg}}</div>
+</div>
+
+<div ng-show="errorMsg">
+<div class="alert alert-danger">{{errorMsg}}</div>
+</div>
+</div>
