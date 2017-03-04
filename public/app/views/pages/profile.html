@@ -1,0 +1,16 @@
+<div ng-repeat="obj in blog">
+<div>
+<label>Author</label>
+{{obj.author}}
+</div>
+<div>
+<label><i>Title</i></label>
+{{obj.title}}
+</div>
+<div>
+<label><i>Paragraph</i></label>
+{{obj.paragraph}}
+</div>
+<button type="button" ng-click="delete(obj._id)" class="btn btn-danger">Delete</button>
+
+</div>

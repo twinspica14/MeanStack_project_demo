@@ -1,0 +1,38 @@
+<!-- Heading -->
+<div class="row text-center">
+    <div class="container">
+        <h2 class="section-heading">User Management</h2>
+
+
+<!-- User Management Table -->
+<div class="panel panel-primary">
+    <!-- Heading -->
+    <div class="panel-heading">
+        <strong>User Management</strong>
+    </div>
+    <!-- Start: Table -->
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            
+            <th>Email</th>
+        </tr>
+        <tr ng-repeat="ppl in users | limitTo: 4">
+            <td>{{ppl.name}}</td>
+            
+            <td>{{ppl.email}}</td>
+            <td>
+                <!-- Edit Button -->
+                <a href="#">
+                    <button type="button"  class="btn btn-primary">Edit</button>
+                </a>
+                <!-- Delete Button -->
+                <button type="button" ng-click="deleteusr(ppl.name)" class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+        <!-- End: Table -->
+    </table>
+</div>
+<!-- User Management Table -->
+
+
