@@ -1,15 +1,33 @@
 <div ng-controller="RegCtrl">
-<form >
-<label>Email</label>
-<input type="text" class="form-control" id="email" ng-model="usr.email" name="email" placeholder="email">
+<form name="userForm"  novalidate>
 
-<label> Name</label>
-<input id="name" name="name" class="form-control" ng-model="usr.name" placeholder="name">
+        <!-- NAME -->
+          <div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.username.$pristine }">
+            <label>name</label>
+            <input type="text" name="name" class="form-control" ng-model="usr.name" ng-minlength="3" ng-maxlength="8" placeholder="name as author">
+            <p ng-show="userForm.username.$error.minlength" class="help-block">Username is too short.</p>
+            <p ng-show="userForm.username.$error.maxlength" class="help-block">Username is too long.</p>
+        </div>
+      
+        <!-- USERNAME -->
+        <div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.username.$pristine }">
+            <label>Password</label>
+           <input id="password" name="password" class="form-control" ng-model="usr.password" placeholder="password" ng-minlength="3" ng-maxlength="12">
+            <p ng-show="userForm.username.$error.minlength" class="help-block">Password is too short.</p>
+          
+        </div>
+        
+        <!-- EMAIL -->
+     <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+            <label>Email</label>
+            <input type="email" name="email" id="email" class="form-control" ng-model="usr.email" placeholder="email">
+            <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+        </div>
+        
+        <button type="submit" ng-click="submit(usr)" btn btn-primary ng-disabled="userForm.$invalid">Submit</button>
+        
+    </form>
 
-<label>Password</label>
-<input id="password" name="password" class="form-control" ng-model="usr.password" placeholder="password">
-</form>
-<button type="button" class="btn btn-success" ng-click="submit(usr)">Submit</button>
 <div ng-show="successMsg">
 <div class="alert alert-success">{{successMsg}}</div>
 </div>
@@ -18,3 +36,6 @@
 <div class="alert alert-danger">{{errorMsg}}</div>
 </div>
 </div>
+
+
+         
