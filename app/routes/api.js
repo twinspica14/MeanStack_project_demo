@@ -84,6 +84,13 @@ router.use(function(req, res, next) {
 router.post('/mes', function(req, res) {
         res.send(req.decoded); // Return the token acquired from middleware
     });
+    // Route to get the currently logged in user    
+router.get('/mes', function(req, res) {
+	User.find({}, function(err, blogs) {
+	return res.send(req.decoded);
+});
+        // Return the token acquired from middleware
+    });
 
 router.get('/permissions', function(req, res){
 	User.findOne({ name: req.decoded.name}, function(err, user){
