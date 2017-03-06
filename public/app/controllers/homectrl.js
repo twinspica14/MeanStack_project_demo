@@ -19,7 +19,9 @@ PostBlog.displayBlog().then(function(data){
 
 });
 
-
+ $scope.random = function() {
+        return 0.5 - Math.random();
+    }
 
 });
 
