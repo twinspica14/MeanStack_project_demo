@@ -22,7 +22,10 @@
         return $http.get('/api/management/');
 
     };
+ userFactory.getme = function(){
+        return $http.get('/api/mes/');
 
+    };
     userFactory.delete = function(name){
         return $http.delete('/api/management/' + name);
 
