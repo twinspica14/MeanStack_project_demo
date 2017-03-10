@@ -1,5 +1,9 @@
 #MEAN Stack for beginners
 
+#Demo
+#http://penyourstory.herokuapp.com
+
+
 npm install --save (this will install all libraries necessary for your app)
 
 Decide structure of your app. Like some follow generators like MEAN.IO, MEANjs
