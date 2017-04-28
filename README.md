@@ -24,3 +24,6 @@ in another cmd again go to bin, and run mongo.
 This will start the mongodb server.
 
 This project will be updated as I will keep updating in free time.
+
+# If one gets hotfix not found or later not installed go to this site, it's not related to mongoddb
+http://www.kriblog.com/bigdata/NoSQL/MongoDb/hotfix-kb2731284-or-later-update-is-not-installed-will-zero-out-data-files.html
